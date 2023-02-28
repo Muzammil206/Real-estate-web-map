@@ -254,13 +254,13 @@ document.getElementById('fly').addEventListener('click', () => {
 
     ////////Api////////
 
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': '48987c29a2msh70042b6c8cc7318p1be182jsn410b29c07c53',
-    //         'X-RapidAPI-Host': 'zillow56.p.rapidapi.com'
-    //     }
-    // };
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '48987c29a2msh70042b6c8cc7318p1be182jsn410b29c07c53',
+            'X-RapidAPI-Host': 'zillow56.p.rapidapi.com'
+        }
+    };
     
     fetch('https://zillow56.p.rapidapi.com/search?location=houston%2C%20tx', options)
         .then(response => response.json())
