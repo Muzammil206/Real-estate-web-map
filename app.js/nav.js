@@ -183,6 +183,9 @@ const display3dMap = function(map){
 
 display3dMap(mapmobile)
 display3dMap(map)
+
+mapmobile.scrollZoom.disable()
+mapmobile["dragPan"].disable();
 ////change map style
 
 
@@ -251,13 +254,13 @@ document.getElementById('fly').addEventListener('click', () => {
 
     ////////Api////////
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '48987c29a2msh70042b6c8cc7318p1be182jsn410b29c07c53',
-            'X-RapidAPI-Host': 'zillow56.p.rapidapi.com'
-        }
-    };
+    // const options = {
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': '48987c29a2msh70042b6c8cc7318p1be182jsn410b29c07c53',
+    //         'X-RapidAPI-Host': 'zillow56.p.rapidapi.com'
+    //     }
+    // };
     
     fetch('https://zillow56.p.rapidapi.com/search?location=houston%2C%20tx', options)
         .then(response => response.json())
@@ -315,17 +318,6 @@ document.getElementById('fly').addEventListener('click', () => {
                </div>
             ` )
 
-            const mobileHtml = mobileInfo.insertAdjacentHTML('beforeend',`
-            <div class=" mobile-info animate-in slide-in-from-top  sm:hidden  mobile-inform  absolute bottom-0 h-60 w-full bg-white  rounded-tl-3xl flex  shadow-xl">
-            <img src="cancel (1).png" alt="cancel" class=" cancel-btn hover:w-[45px] ease-in group-hover:flex w-[30px] absolute top-0 right-0  ">
-            <img src="${data3.imgSrc}" alt="House" class="house-image h-3/4 m w-2/3 mt-4 mx-2 rounded-3xl float-left p-2">
-            <div class="information float-right text-center mt-10">
-            <h1 class="price absolute top-4 mb-10 right-5 text-orange-500 text-xl font-bold font-sans">#2.5m/year</h1>
-            <h2 class="  font-semibold text-blue-500 pt-3 mt-4 border-b-2 text-base">🏡No 111 Ade Street Ilorin</h2>
-            <p class="p-2 font-serif mt-4 text-base font-medium text-gray-600"> 3🛏  | 2🛁  | 🛣1,500 sq ft</p>
-            </div>
-       
-            </div>`)
             
         })
         .catch(err => console.error(err));
@@ -337,7 +329,5 @@ document.getElementById('fly').addEventListener('click', () => {
 
 //////////smothscrol
 
-mobileinfoCancel.addEventListener('click', function(){
-    mobileInfo.style.opacity = '0'
- })
+
 
