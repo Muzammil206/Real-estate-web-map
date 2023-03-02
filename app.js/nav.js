@@ -257,10 +257,11 @@ document.getElementById('fly').addEventListener('click', () => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '48987c29a2msh70042b6c8cc7318p1be182jsn410b29c07c53',
+            'X-RapidAPI-Key': '646b0490e8msh66e83a9f43af374p1dd5c3jsnd3b301d0d39a',
             'X-RapidAPI-Host': 'zillow56.p.rapidapi.com'
         }
     };
+    
     
     fetch('https://zillow56.p.rapidapi.com/search?location=houston%2C%20tx', options)
         .then(response => response.json())
@@ -269,6 +270,9 @@ document.getElementById('fly').addEventListener('click', () => {
             const data = response.results[0]
             const data2 = response.results[1]
             const data3 = response.results[2]
+            const data4 = response.results[7]
+            const data5 = response.results[9]
+            const data6 = response.results[12]
             console.log(data3.imgSrc)
             
 
@@ -301,21 +305,39 @@ document.getElementById('fly').addEventListener('click', () => {
              <div class="    bg-slate-50 text-center relative  mx-4 sm:w-4/5 rounded-3xl shadow-xl lg:h-full lg:w-4/5 mb-10  duration-500 ease-in-out transform hover:scale-105">
              <img src="${data3.imgSrc}" alt="house" class=" relative w-full rounded-3xl rounded-b-lg  bg-none">
              <h1 class=" font-normal  mb-6 m-t-2 text-l  text-gray-600">🏡${data3.streetAddress} ${data3.city}</h1>
-             <h1 class=" font-normal text-l text-orange-500">#${data3.price/700}m</h1>
+             <h1 class=" font-normal text-l text-orange-500">#${data3.price}m</h1>
              <p class="p-2 font-serif mt-4 font-normal  text-l text-gray-600 border-t-2 "> ${data3.bedrooms}🛏   | ${data3.bathrooms}🛁  |  🛣1,500 sq ft</p>
              </div>
              <div class="    bg-slate-50 text-center relative  mx-4 sm:w-4/5 rounded-3xl shadow-xl lg:h-full lg:w-4/5 mb-10  duration-500 ease-in-out transform hover:scale-105">
              <img src="${data2.imgSrc}" alt="house" class=" relative w-full rounded-3xl rounded-b-lg h-1/2 bg-none">
              <h1 class=" font-normal  mb-6 m-t-2 text-text-l  text-gray-600">🏡${data2.streetAddress} ${data2.city}</h1>
-             <h1 class=" font-normal text-l text-orange-500">#${data2.price/700}m/year</h1>
+             <h1 class=" font-normal text-l text-orange-500">#${data2.price}m/year</h1>
              <p class="p-2 font-serif mt-5 font-normal  text-xl text-gray-600 border-t-2 "> ${data2.bedrooms}🛏  | ${data2.bathrooms}🛁  |  🛣1,500 sq ft</p>
               </div>
               <div class="    bg-slate-50 text-center relative  mx-4 sm:w-4/5 rounded-3xl shadow-xl lg:h-full lg:w-4/5 mb-10  duration-500 ease-in-out transform hover:scale-105">
               <img src="${data.imgSrc}" alt="house" class=" relative w-full rounded-3xl rounded-b-lg  bg-none">
               <h1 class=" font-normal  mb-6 m-t-2 text-l  text-gray-600">🏡${data.streetAddress} ${data3.city}</h1>
-              <h1 class=" font-normal text-l text-orange-500">#${data.price/700}m/year</h1>
+              <h1 class=" font-normal text-l text-orange-500">#${data.price}m/year</h1>
               <p class="p-2 font-serif mt-5 font-normal  text-xl text-gray-600 border-t-2 "> ${data2.bedrooms}🛏   |  ${data2.bathrooms}🛁  |  🛣1,500 sq ft</p>
                </div>
+               <div class="    bg-slate-50 text-center relative  mx-4 sm:w-4/5 rounded-3xl shadow-xl lg:h-full lg:w-4/5 mb-10  duration-500 ease-in-out transform hover:scale-105">
+               <img src="${data4.imgSrc}" alt="house" class=" relative w-full rounded-3xl rounded-b-lg h-1/2 bg-none">
+               <h1 class=" font-normal  mb-6 m-t-2 text-text-l  text-gray-600">🏡${data4.streetAddress} ${data4.city}</h1>
+               <h1 class=" font-normal text-l text-orange-500">#${data4.price}m/year</h1>
+               <p class="p-2 font-serif mt-5 font-normal  text-xl text-gray-600 border-t-2 "> ${data4.bedrooms}🛏  | ${data2.bathrooms}🛁  |  🛣1,500 sq ft</p>
+                </div>
+                <div class="    bg-slate-50 text-center relative  mx-4 sm:w-4/5 rounded-3xl shadow-xl lg:h-full lg:w-4/5 mb-10  duration-500 ease-in-out transform hover:scale-105">
+                <img src="${data5.imgSrc}" alt="house" class=" relative w-full rounded-3xl rounded-b-lg  bg-none">
+                <h1 class=" font-normal  mb-6 m-t-2 text-l  text-gray-600">🏡${data5.streetAddress} ${data5.city}</h1>
+                <h1 class=" font-normal text-l text-orange-500">#${data5.price}m/year</h1>
+                <p class="p-2 font-serif mt-5 font-normal  text-xl text-gray-600 border-t-2 "> ${data5.bedrooms}🛏   |  ${data2.bathrooms}🛁  |  🛣1,500 sq ft</p>
+                 </div>
+                <div class="    bg-slate-50 text-center relative  mx-4 sm:w-4/5 rounded-3xl shadow-xl lg:h-full lg:w-4/5 mb-10  duration-500 ease-in-out transform hover:scale-105">
+                <img src="${data6.imgSrc}" alt="house" class=" relative w-full rounded-3xl rounded-b-lg  bg-none">
+                <h1 class=" font-normal  mb-6 m-t-2 text-l  text-gray-600">🏡${data6.streetAddress} ${data6.city}</h1>
+                <h1 class=" font-normal text-l text-orange-500">#${data6.price}m/year</h1>
+                <p class="p-2 font-serif mt-5 font-normal  text-xl text-gray-600 border-t-2 "> ${data6.bedrooms}🛏   |  ${data2.bathrooms}🛁  |  🛣1,500 sq ft</p>
+                </div>
             ` )
 
             
